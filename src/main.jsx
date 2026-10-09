@@ -170,12 +170,12 @@ const quizzes = {
     question:
       'Scenario: A team hits a blocker and applies a quick workaround so work can resume immediately. Six months later, the workaround is still in place, was never documented as an open issue, and nobody remembers there was ever supposed to be a permanent fix. What does this scenario illustrate?',
     answers: [
-      'A successful application of the "remove directly" rung, since the blocker stopped affecting the team’s work',
-      'A violation of the workaround’s iron rule — it should have been documented with the issue kept open and re-dated to a permanent fix, not allowed to quietly become permanent',
-      'Correct use of "accept and monitor," since the team is living with the situation long-term',
-      'An appropriate use of escalation, since the issue has now existed for six months'
+      "Keep the workaround logged as open and date the permanent fix",
+      "A successful application of the \"remove directly\" rung, since the blocker stopped affecting the team’s work",
+      "Correct use of \"accept and monitor,\" since the team is living with the situation long-term",
+      "An appropriate use of escalation, since the issue has now existed for six months",
     ],
-    correct: 1,
+    correct: 0,
     good: 'Correct! This is exactly the failure the iron rule exists to prevent — a workaround is supposed to stay documented and open, re-dated toward a real fix, not fade into permanence unnoticed. An undocumented workaround that becomes permanent is exactly how technical debt and audit findings are born.',
     bad: 'Reconsider — this wasn’t a genuine fix (remove directly), it wasn’t an explicit, reviewed decision (accept and monitor), and simply persisting for six months isn’t itself an escalation. The core problem is a workaround that was never documented or kept open.'
   },
@@ -183,12 +183,12 @@ const quizzes = {
     question:
       'Scenario: A project manager clears a significant bottleneck in the team’s workflow. Throughput improves immediately, and the team goes several weeks without raising any new complaints, so the project manager assumes everything is now running smoothly and stops actively monitoring flow. What does this scenario overlook?',
     answers: [
-      'The Theory of Constraints, which suggests that removing one bottleneck typically causes another to surface — and the absence of complaints doesn’t mean the absence of problems',
-      'Nothing — an absence of complaints for several weeks is a reliable sign the team has no remaining impediments',
-      'The workaround iron rule, since the original bottleneck fix was never documented',
-      'The need to shield the team from distractions, which is unrelated to this scenario'
+      "Nothing — an absence of complaints for several weeks is a reliable sign the team has no remaining impediments",
+      "The workaround iron rule, since the original bottleneck fix was never documented",
+      "The need to shield the team from distractions, which is unrelated to this scenario",
+      "Removing one bottleneck can reveal another, so flow still needs active monitoring",
     ],
-    correct: 0,
+    correct: 3,
     good: 'Correct! The Theory of Constraints predicts that removing one bottleneck typically reveals another one — and this lesson explicitly warns against assuming silence means everything is fine. Reassessment has to stay active, not pause the moment things look quiet.',
     bad: 'Reconsider — an absence of complaints is exactly the false signal this lesson warns against; this isn’t a workaround-documentation issue, since removing a bottleneck directly isn’t a workaround; and shielding the team from distractions isn’t what’s being tested here.'
   }
